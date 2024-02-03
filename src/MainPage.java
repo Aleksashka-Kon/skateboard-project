@@ -14,9 +14,9 @@ public class MainPage extends JFrame{
     private JLabel imageLabel;
     ImageIcon skateboardIcon = new ImageIcon("skateboard.png");
 
-    public MainPage(){
+    public MainPage(int x, int y, int width, int height){
         MainPagePanel.setName("Main page");
-        setBounds(100,100, 400, 400);
+        setBounds(x,y, width, height);
         setContentPane(MainPagePanel);
         setVisible(true);
         ParametrsPane.setText("Your name is: " + GlobalContext.insertName + ", " + "your heigh is:"  + GlobalContext.insertHeight );

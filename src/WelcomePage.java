@@ -17,8 +17,9 @@ public class WelcomePage extends JFrame{
                 GlobalContext.insertName = textPane1.getText();
                 GlobalContext.insertHeight = textPane2.getText();
                 textPane3.setText("Your name is: " + GlobalContext.insertName + ", " + "your heigh is: " + GlobalContext.insertHeight );
-                new MainPage();
-
+                WelcomePage.setVisible(false);
+                new MainPage(getX(), getY(), getWidth(), getHeight());
+                dispose();
             }
         });
     }
@@ -31,4 +32,5 @@ public class WelcomePage extends JFrame{
     private JLabel WeclomeLabel;
     private JLabel HeighLabel;
     private JLabel NameLabel;
+    private JComboBox comboBox1;
 }
