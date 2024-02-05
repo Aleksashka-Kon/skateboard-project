@@ -8,49 +8,55 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        /*Database database = new Database();
-        database.bigAir = new LinkData();
-        database.bigAir.boardUrl = " https://skateparkoftampa.com/product/73487/Flip_Bob_Burnquist_Phoenix_Shield_Deck";
-        database.bigAir.wheelsUrl ="https://www.skvot.com/catalog/skateboarding/wheels-for-skateboards-ricta-clouds-white-78a-60mm-00143430";
-        database.bigAir.bearingsUrl =" https://bonesbearings.com/bones-reg-swiss-skateboard-bearings-8-pack";
-        database.bigAir.gripUrl = "https://www.skvot.com/catalog/skateboarding/skin-for-skateboarding-mobgrip-santa-cruz-black-1-list-00126471";
-        database.bigAir.truksUrl = "independed 219";
+        DatabaseBig_Air databaseBig_Air = new DatabaseBig_Air();
+        DatabaseBig_Air.bigAir = new LinkData();
+        DatabaseBig_Air.bigAir.boardUrl = " https://skateparkoftampa.com/product/73487/Flip_Bob_Burnquist_Phoenix_Shield_Deck";
+        DatabaseBig_Air.bigAir.wheelsUrl ="https://www.skvot.com/catalog/skateboarding/wheels-for-skateboards-ricta-clouds-white-78a-60mm-00143430";
+        DatabaseBig_Air.bigAir.bearingsUrl =" https://bonesbearings.com/bones-reg-swiss-skateboard-bearings-8-pack";
+        DatabaseBig_Air.bigAir.gripUrl = "https://www.skvot.com/catalog/skateboarding/skin-for-skateboarding-mobgrip-santa-cruz-black-1-list-00126471";
+        DatabaseBig_Air.bigAir.truksUrl = "independed 219";
         //
-        database.park = new LinkData();
-        database.park.wheelsUrl = "https://odddays.store/shop/kolesa-bones-spf-p5-hawk-t-bone-58mm";
-        database.park.boardUrl = " https://www.skatedeluxe.com/en/real-wilkins-oval-8-5-skateboard-deck-blue_p158520";
-        database.park.bearingsUrl = "https://www.skvot.com/catalog/skateboarding/bearings-for-skateboards-bones-swiss-ceramic-CB-00008140";
-        database.park.truksUrl = " https://www.skvot.com/catalog/skateboarding/suspension-for-skateboarding-thunder-trucks-polished-hollow-ii-149-R9082282";
-        database.park.gripUrl = "https://www.skvot.com/catalog/skateboarding/skin-for-skateboarding-mobgrip-m-80-grip-tape-9x33-black-00114803";
+        DatabasePark databasePark = new DatabasePark();
+        DatabasePark.park = new LinkData();
+        DatabasePark.park.wheelsUrl = "https://odddays.store/shop/kolesa-bones-spf-p5-hawk-t-bone-58mm";
+        DatabasePark.park.boardUrl = " https://www.skatedeluxe.com/en/real-wilkins-oval-8-5-skateboard-deck-blue_p158520";
+        DatabasePark.park.bearingsUrl = "https://www.skvot.com/catalog/skateboarding/bearings-for-skateboards-bones-swiss-ceramic-CB-00008140";
+        DatabasePark.park.truksUrl = " https://www.skvot.com/catalog/skateboarding/suspension-for-skateboarding-thunder-trucks-polished-hollow-ii-149-R9082282";
+        DatabasePark.park.gripUrl = "https://www.skvot.com/catalog/skateboarding/skin-for-skateboarding-mobgrip-m-80-grip-tape-9x33-black-00114803";
         //
 
-        database.street = new LinkData();
-        database.street.gripUrl = "https://www.skvot.com/catalog/skateboarding/skin-for-skateboarding-mobgrip-m-80-grip-tape-9x33-black-00114803";
-        database.street.boardUrl = "https://bakerskateboards.com/pages/board-construction";
-        database.street.wheelsUrl = " https://trepang.co/shop/kolesa-spitfire-f4-99-tablet-natural-55mm";
-        database.street.bearingsUrl = "https://www.traektoria.ru/product/1132536_podshipniki-bones-reds/";
-        database.street.truksUrl = " https://www.skvot.com/catalog/skateboarding/suspension-for-skateboarding-ace-trucks-33-af-1-polished-00170526";
+        DatabaseStreet databaseStreet = new DatabaseStreet();
+        DatabaseStreet.street = new LinkData();
+        DatabaseStreet.street.gripUrl = "https://www.skvot.com/catalog/skateboarding/skin-for-skateboarding-mobgrip-m-80-grip-tape-9x33-black-00114803";
+        DatabaseStreet.street.boardUrl = "https://bakerskateboards.com/pages/board-construction";
+        DatabaseStreet.street.wheelsUrl = " https://trepang.co/shop/kolesa-spitfire-f4-99-tablet-natural-55mm";
+        DatabaseStreet.street.bearingsUrl = "https://www.traektoria.ru/product/1132536_podshipniki-bones-reds/";
+        DatabaseStreet.street.truksUrl = " https://www.skvot.com/catalog/skateboarding/suspension-for-skateboarding-ace-trucks-33-af-1-polished-00170526";
+
+        DatabasePlace.place = new LinkData();
+        DatabasePlace.place.level = WelcomePage.level_GUI;
+
 
         //
-        String json = new Gson().toJson(database);
+        String json = new Gson().toJson(databasePark);
 
-        Database fromJson = new Gson().fromJson(json, Database.class);
+        DatabasePark fromJson = new Gson().fromJson(json, DatabasePark.class);
         System.out.println(json);
 
-        try {
-            FileWriter fw = new FileWriter("Database.txt");
+        /*try {
+            FileWriter fw = new FileWriter("DatabasePark.txt");
             fw.write(json);
             fw.close();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }*/
 
-        FileReader fr = new FileReader("Database.txt");
+        FileReader fr = new FileReader("DatabasePark.txt");
         Scanner scanner = new Scanner(fr);
-        String json = scanner.nextLine();
-        Database database = new Gson().fromJson(json, Database.class);
+        json = scanner.nextLine();
+        databasePark = new Gson().fromJson(json, DatabasePark.class);
 
-        System.out.println(database.bigAir.bearingsUrl);
+
         new WelcomePage();
     }
 }

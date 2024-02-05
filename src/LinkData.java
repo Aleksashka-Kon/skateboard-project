@@ -4,4 +4,6 @@ public class LinkData {
     String bearingsUrl;
     String  truksUrl;
     String gripUrl;
+
+    String level;
 }
