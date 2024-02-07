@@ -1,7 +1,11 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class MainPage extends JFrame{
+
+
     private JLabel MainMenuLabel;
     private JButton btnWheels;
     private JButton btntrucks;
@@ -14,13 +18,26 @@ public class MainPage extends JFrame{
     private JLabel imageLabel;
     ImageIcon skateboardIcon = new ImageIcon("skateboard.png");
 
-    public MainPage(int x, int y, int width, int height){
+
+    public MainPage(){
         MainPagePanel.setName("Main page");
-        setBounds(x,y, width, height);
         setContentPane(MainPagePanel);
+        setSize(1650, 1080);
         setVisible(true);
-        ParametrsPane.setText("Your name is: " + GlobalContext.insertName + ", " + "your heigh is:"  + GlobalContext.insertHeight );
+        ParametrsPane.setText("Your name is: " + GlobalContext.insertName + ", " + " your height is:"  + GlobalContext.insertHeight + " / Where do you want to skate: " + "МЕСТО");
         imageLabel.setIcon(skateboardIcon);
         skateboardIcon.setImage(skateboardIcon.getImage().getScaledInstance(250,200, Image.SCALE_SMOOTH));
+
+        btnDeck.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if(e.getSource() == btnDeck){
+                    dispose();
+                    new DeckPage();
+
+                }
+
+            }
+        });
     }
 }

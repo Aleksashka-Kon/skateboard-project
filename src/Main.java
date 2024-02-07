@@ -3,11 +3,20 @@ import java.io.*;
 
 import java.io.FileWriter;
 import java.io.IOException;
+import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+
 public class Main {
+
+
+
     public static void main(String[] args) throws IOException {
+        PLaceToSkate pLaceToSkate = new PLaceToSkate();
+        PLaceToSkate.place = new LinkData();
+
+
         DatabaseBig_Air databaseBig_Air = new DatabaseBig_Air();
         DatabaseBig_Air.bigAir = new LinkData();
         DatabaseBig_Air.bigAir.boardUrl = " https://skateparkoftampa.com/product/73487/Flip_Bob_Burnquist_Phoenix_Shield_Deck";
@@ -34,29 +43,51 @@ public class Main {
         DatabaseStreet.street.truksUrl = " https://www.skvot.com/catalog/skateboarding/suspension-for-skateboarding-ace-trucks-33-af-1-polished-00170526";
 
         DatabasePlace.place = new LinkData();
-        DatabasePlace.place.level = WelcomePage.level_GUI;
+
 
 
         //
-        String json = new Gson().toJson(databasePark);
+        /*String jsonPark = new Gson().toJson(databasePark.park);
 
-        DatabasePark fromJson = new Gson().fromJson(json, DatabasePark.class);
-        System.out.println(json);
+       DatabasePark fromJson = new Gson().fromJson(jsonPark, DatabasePark.class);
+        System.out.println(jsonPark);*/
 
         /*try {
             FileWriter fw = new FileWriter("DatabasePark.txt");
-            fw.write(json);
+            fw.write(jsonPark);
             fw.close();
+            /*FileReader fr = new FileReader("DatabasePark.txt");
+            Scanner scanner = new Scanner(fr);
+            json = scanner.nextLine();
+            databasePark = new Gson().fromJson(json, DatabasePark.class);
         } catch (IOException e) {
             throw new RuntimeException(e);
-        }*/
+        }
 
-        FileReader fr = new FileReader("DatabasePark.txt");
+         FileReader fr = new FileReader("DatabasePark.txt");
         Scanner scanner = new Scanner(fr);
-        json = scanner.nextLine();
-        databasePark = new Gson().fromJson(json, DatabasePark.class);
+        jsonPark = scanner.nextLine();
+        databasePark = new Gson().fromJson(jsonPark, DatabasePark.class);
 
+        String jsonStreet = new Gson().toJson(databaseStreet.street);
+        try{
+            FileWriter fw1 = new FileWriter("DatabaseStreet.txt");
+            fw1.write(jsonStreet);
+            fw1.close();
+        } catch (IOException e){
+            throw new RuntimeException(e);
+        }
+        String jsonBig_Air = new Gson().toJson(databaseBig_Air.bigAir);
+        try{
+            FileWriter fw2 = new FileWriter("DatabaseBigAir.txt");
+            fw2.write(jsonBig_Air);
+            fw2.close();
+        } catch (IOException e){
+            throw new RuntimeException(e);
+        }
 
+*/
         new WelcomePage();
+
     }
 }

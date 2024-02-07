@@ -5,10 +5,14 @@ import java.awt.event.ActionListener;
 
 
 public class WelcomePage extends JFrame{
-    public static String level_GUI;
+
+    private String PlaceToSkate;
+
+
+
     public WelcomePage(){
         setContentPane(WelcomePage);
-         setSize(1650, 1080);
+        setSize(1650, 1080);
         setVisible(true);
         WelcomePage.setName("Welcome page");
 
@@ -19,17 +23,12 @@ public class WelcomePage extends JFrame{
 
 
 
-
-
         btnSubmitName.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 GlobalContext.insertName = textPane1.getText();
                 GlobalContext.insertHeight = textPane2.getText();
-                textPane3.setText("Your name is: " + GlobalContext.insertName + ", " + "your heigh is: " + GlobalContext.insertHeight );
-                WelcomePage.setVisible(false);
-                new MainPage(getX(), getY(), getWidth(), getHeight());
-                level_GUI = comboBox1.getItemAt(comboBox1.getSelectedIndex()).toString();
+                new MainPage();
                 dispose();
             }
         });
@@ -37,9 +36,12 @@ public class WelcomePage extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 comboBox1.getItemAt(comboBox1.getSelectedIndex());
+                PlaceToSkate = (String) comboBox1.getSelectedItem();
+
             }
         });
     }
+
 
     private JButton btnSubmitName;
     private JTextPane textPane1;
