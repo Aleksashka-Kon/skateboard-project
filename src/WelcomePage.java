@@ -1,3 +1,4 @@
+import javax.naming.Context;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -6,13 +7,17 @@ import java.awt.event.ActionListener;
 
 public class WelcomePage extends JFrame{
 
-    private String PlaceToSkate;
+
 
 
 
     public WelcomePage(){
+        PLaceToSkate pLaceToSkate = new PLaceToSkate();
+        PLaceToSkate.place = new LinkData();
+
+
         setContentPane(WelcomePage);
-        setSize(1650, 1080);
+        setSize(1650, 1050);
         setVisible(true);
         WelcomePage.setName("Welcome page");
 
@@ -20,6 +25,7 @@ public class WelcomePage extends JFrame{
         comboBox1.addItem("big-air");
         comboBox1.addItem( "park");
         comboBox1.addItem("street");
+
 
 
 
@@ -36,11 +42,15 @@ public class WelcomePage extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 comboBox1.getItemAt(comboBox1.getSelectedIndex());
-                PlaceToSkate = (String) comboBox1.getSelectedItem();
+                Place = (String) comboBox1.getSelectedItem();
+                PLaceToSkate.place.placeString = Place;
+
+
 
             }
         });
     }
+    public String Place;
 
 
     private JButton btnSubmitName;

@@ -13,8 +13,8 @@ public class Main {
 
 
     public static void main(String[] args) throws IOException {
-        PLaceToSkate pLaceToSkate = new PLaceToSkate();
-        PLaceToSkate.place = new LinkData();
+        /* PLaceToSkate pLaceToSkate = new PLaceToSkate();
+        PLaceToSkate.place = new LinkData();*/
 
 
         DatabaseBig_Air databaseBig_Air = new DatabaseBig_Air();

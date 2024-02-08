@@ -6,6 +6,7 @@ import java.awt.event.ActionListener;
 public class MainPage extends JFrame{
 
 
+
     private JLabel MainMenuLabel;
     private JButton btnWheels;
     private JButton btntrucks;
@@ -16,17 +17,20 @@ public class MainPage extends JFrame{
     private JPanel MainPagePanel;
     private JTextPane ParametrsPane;
     private JLabel imageLabel;
-    ImageIcon skateboardIcon = new ImageIcon("skateboard.png");
+
+
+
 
 
     public MainPage(){
+
+
         MainPagePanel.setName("Main page");
         setContentPane(MainPagePanel);
-        setSize(1650, 1080);
+        setSize(1650, 1050);
         setVisible(true);
-        ParametrsPane.setText("Your name is: " + GlobalContext.insertName + ", " + " your height is:"  + GlobalContext.insertHeight + " / Where do you want to skate: " + "МЕСТО");
-        imageLabel.setIcon(skateboardIcon);
-        skateboardIcon.setImage(skateboardIcon.getImage().getScaledInstance(250,200, Image.SCALE_SMOOTH));
+        ParametrsPane.setText("Your name is: " + GlobalContext.insertName + ", " + " your height is:"  + GlobalContext.insertHeight + " / Where do you want to skate: " +  PLaceToSkate.place.placeString);
+
 
         btnDeck.addActionListener(new ActionListener() {
             @Override
@@ -37,6 +41,15 @@ public class MainPage extends JFrame{
 
                 }
 
+            }
+        });
+        btnToWelcomePage.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if(e.getSource() == btnToWelcomePage){
+                    dispose();
+                    new WelcomePage();
+                }
             }
         });
     }
