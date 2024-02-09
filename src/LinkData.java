@@ -5,7 +5,8 @@ public class LinkData {
     String  truksUrl;
     String gripUrl;
 
-    String placeString ;
+    String placeString;
+    String heightString;
 
 
 }

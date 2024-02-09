@@ -14,7 +14,7 @@ public class WelcomePage extends JFrame{
     public WelcomePage(){
         PLaceToSkate pLaceToSkate = new PLaceToSkate();
         PLaceToSkate.place = new LinkData();
-
+        UsersHeight.height = new LinkData();
 
         setContentPane(WelcomePage);
         setSize(1650, 1050);
@@ -44,6 +44,7 @@ public class WelcomePage extends JFrame{
                 comboBox1.getItemAt(comboBox1.getSelectedIndex());
                 Place = (String) comboBox1.getSelectedItem();
                 PLaceToSkate.place.placeString = Place;
+                UsersHeight.height.heightString = (String) textPane2.getText();
 
 
 
@@ -51,6 +52,7 @@ public class WelcomePage extends JFrame{
         });
     }
     public String Place;
+
 
 
     private JButton btnSubmitName;

@@ -29,7 +29,7 @@ public class MainPage extends JFrame{
         setContentPane(MainPagePanel);
         setSize(1650, 1050);
         setVisible(true);
-        ParametrsPane.setText("Your name is: " + GlobalContext.insertName + ", " + " your height is:"  + GlobalContext.insertHeight + " / Where do you want to skate: " +  PLaceToSkate.place.placeString);
+        ParametrsPane.setText("Your name is: " + GlobalContext.insertName  + "/  your height is:"  + GlobalContext.insertHeight + " / Where do you want to skate: " +  PLaceToSkate.place.placeString);
 
 
         btnDeck.addActionListener(new ActionListener() {
