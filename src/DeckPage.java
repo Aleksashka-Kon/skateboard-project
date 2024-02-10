@@ -21,34 +21,34 @@ public class DeckPage extends JFrame{
 
 
     public DeckPage(){
-        if(UsersHeight.height.heightString == "140"){
+        if(UsersHeight.height.heightString.equals("140")){
             heightrange = "Your size is up to 7,5";
 
         }
-        if(UsersHeight.height.heightString == "150"){
+        if(UsersHeight.height.heightString.equals("150")){
             heightrange = "Your size is from 7,5 - 7,75";
         }
-        if(UsersHeight.height.heightString == "175"){
+        if(UsersHeight.height.heightString.equals("175")){
             heightrange = "Your size is from 7,75 - 8,125";
         }
-        if(UsersHeight.height.heightString == "185"){
+        if(UsersHeight.height.heightString.equals("185")){
             heightrange = "Your size is from 7,875 - 8,25";
         }
 
         if (PLaceToSkate.place.placeString == "street"){
 
             answer =  DatabaseStreet.street.boardUrl;
-            togetherAnswer = answer + " " + heightrange;
+            togetherAnswer = heightrange;
 
 
         }
         if (PLaceToSkate.place.placeString == "park"){
             answer= DatabasePark.park.boardUrl;
-            togetherAnswer = answer + " "+ heightrange;
+            togetherAnswer = heightrange;
         }
         if (PLaceToSkate.place.placeString == "big-air"){
             answer = DatabaseBig_Air.bigAir.boardUrl;
-            togetherAnswer = answer + " " + heightrange;
+            togetherAnswer =  heightrange;
         }
 
 
