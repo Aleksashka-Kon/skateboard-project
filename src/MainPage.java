@@ -16,10 +16,8 @@ public class MainPage extends JFrame{
     private JButton btnToWelcomePage;
     private JPanel MainPagePanel;
     private JTextPane ParametrsPane;
-    private JLabel imageLabel;
-
-
-
+    private JLabel ImageLabel;
+    ImageIcon image = new ImageIcon("SkateboardINeed.png");
 
 
     public MainPage(){
@@ -30,6 +28,9 @@ public class MainPage extends JFrame{
         setSize(1650, 1050);
         setVisible(true);
         ParametrsPane.setText("Your name is: " + GlobalContext.insertName  + "/  your height is:"  + GlobalContext.insertHeight + " / Where do you want to skate: " +  PLaceToSkate.place.placeString);
+        ImageLabel.setIcon(image);
+
+
 
 
         btnDeck.addActionListener(new ActionListener() {

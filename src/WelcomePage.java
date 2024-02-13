@@ -21,6 +21,7 @@ public class WelcomePage extends JFrame{
         setVisible(true);
         WelcomePage.setName("Welcome page");
 
+
         comboBox1.addItem("");
         comboBox1.addItem("big-air");
         comboBox1.addItem( "park");
