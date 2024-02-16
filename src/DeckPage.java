@@ -17,21 +17,25 @@ public class DeckPage extends JFrame{
     String heightrange;
     String answer;
     String togetherAnswer;
+    int heightraneInt;
+
 
 
 
     public DeckPage(){
-        if(UsersHeight.height.heightString.equals("140")){
+        heightraneInt = Integer.parseInt(UsersHeight.height.heightString);
+
+        if(heightraneInt  <= 140){
             heightrange = "Your size is up to 7,5";
 
         }
-        if(UsersHeight.height.heightString.equals("150")){
+        if((heightraneInt >140) && (heightraneInt <= 150)){
             heightrange = "Your size is from 7,5 - 7,75";
         }
-        if(UsersHeight.height.heightString.equals("175")){
+        if((heightraneInt >150) && (heightraneInt <= 175)){
             heightrange = "Your size is from 7,75 - 8,125";
         }
-        if(UsersHeight.height.heightString.equals("185")){
+        if((heightraneInt >175) && (heightraneInt <= 185)){
             heightrange = "Your size is from 7,875 - 8,25";
         }
 
@@ -80,6 +84,7 @@ public class DeckPage extends JFrame{
         LinkResult.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+
                 textFieldCopyUrl.setText(answer);
             }
         });

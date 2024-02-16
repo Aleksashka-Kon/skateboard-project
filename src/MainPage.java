@@ -53,5 +53,15 @@ public class MainPage extends JFrame{
                 }
             }
         });
+        btnWheels.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (e.getSource() == btnWheels) {
+                    dispose();
+                    new WheelsPage();
+
+                }
+            }
+        });
     }
 }
