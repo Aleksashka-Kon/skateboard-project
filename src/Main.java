@@ -24,6 +24,8 @@ public class Main {
         DatabaseBig_Air.bigAir2 = new LinkData();
         DatabaseBig_Air.bigAir2.boardUrl = "https://www.skvot.com/catalog/skateboarding/skate-deck;size:8.7,8.75,8.8,8.94,9,9,9.0";
         DatabaseBig_Air.bigAir2.wheelsUrl = "https://www.skvot.com/catalog/skateboarding/wheels-for-skateboards;size:59,60";
+        DatabaseBig_Air.bigAir.bearingsUrl = "https://www.skvot.com/catalog/skateboarding/bearings-for-skateboards-pig-abec-5-neon-bearings-00156417";
+        DatabaseBig_Air.bigAir.gripUrl = "https://www.skvot.com/catalog/skateboarding/skin-for-skateboarding";
 
 
         //
@@ -38,6 +40,9 @@ public class Main {
         DatabasePark.park2.boardUrl = "https://www.skvot.com/catalog/skateboarding/skate-deck;size:8.5,8.50,8.6,8.62,8.625,8.63";
         DatabasePark.park2.truksUrl = "https://www.skvot.com/catalog/skateboarding/suspension-for-skateboarding;size:149,151,55";
         DatabasePark.park2.wheelsUrl = "https://www.skvot.com/catalog/skateboarding/wheels-for-skateboards;size:58";
+        DatabasePark.park.bearingsUrl = "https://www.skvot.com/catalog/skateboarding/bearings-for-skateboards-pig-abec-3-00000818";
+        DatabasePark.park.gripUrl = "https://www.skvot.com/catalog/skateboarding/skin-for-skateboarding";
+
         //
 
         DatabaseStreet databaseStreet = new DatabaseStreet();
@@ -51,6 +56,8 @@ public class Main {
         DatabaseStreet.street2.boardUrl = "https://www.skvot.com/catalog/skateboarding/skate-deck;size:8,8.0";
         DatabaseStreet.street2.truksUrl = "https://www.skvot.com/catalog/skateboarding/suspension-for-skateboarding;size:139,33";
         DatabaseStreet.street2.wheelsUrl = "https://www.skvot.com/catalog/skateboarding/wheels-for-skateboards;size:54";
+        DatabaseStreet.street.bearingsUrl = "https://www.skvot.com/catalog/skateboarding/bearings-for-skateboards-pig-select-bearings-00159442";
+        DatabaseStreet.street.gripUrl = "https://www.skvot.com/catalog/skateboarding/skin-for-skateboarding";
 
 
 

@@ -2,7 +2,7 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import static sun.tools.jconsole.inspector.XDataViewer.dispose;
+
 
 public class WheelsPage extends JFrame{
     private JPanel WheelsPage;
@@ -15,7 +15,7 @@ public class WheelsPage extends JFrame{
     private JTextField textFieldCopyUrl;
     String answer;
 
-    String random;
+
 
     public WheelsPage() {
         setContentPane(WheelsPage);

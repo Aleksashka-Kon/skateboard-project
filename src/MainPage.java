@@ -63,5 +63,34 @@ public class MainPage extends JFrame{
                 }
             }
         });
+
+
+        btnBearings.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if(e.getSource() == btnBearings){
+                    dispose();
+                    new BearingsPage();
+                }
+            }
+        });
+        btnGrip.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if(e.getSource() == btnGrip){
+                    dispose();
+                    new GripPage();
+                }
+            }
+        });
+        btntrucks.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if(e.getSource() == btntrucks){
+                    dispose();
+                    new TrucksPage();
+                }
+            }
+        });
     }
 }

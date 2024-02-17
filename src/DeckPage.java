@@ -38,6 +38,9 @@ public class DeckPage extends JFrame{
         if((heightraneInt >175) && (heightraneInt <= 185)){
             heightrange = "Your size is from 7,875 - 8,25";
         }
+        if(heightraneInt > 185){
+            heightrange = "Your size is 8,25 and higher";
+        }
 
         if (PLaceToSkate.place.placeString == "street"){
 
