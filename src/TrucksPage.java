@@ -23,21 +23,21 @@ public class TrucksPage extends JFrame{
         setSize(1650, 1050);
         setVisible(true);
         TrucksPage.setName("Trucks Page");
-        if( (heightraneInt > 140)&& (heightraneInt <= 150)){
+        if( (heightraneInt >= 140)&& (heightraneInt <= 150)){
             TruksRangeString = "Your trucks are size 22";
 
         }
-        if( (heightraneInt > 150)&& (heightraneInt <= 175)){
+        if( (heightraneInt > 150)&& (heightraneInt < 175)){
             TruksRangeString = "Your trucks are size 33";
         }
-        if((heightraneInt > 175) && (heightraneInt <= 185)){
+        if((heightraneInt > 175) && (heightraneInt < 185)){
             TruksRangeString = "Your trucks are size 44";
         }
-        if(heightraneInt > 175){
+        if(heightraneInt >= 185){
             TruksRangeString = "Your trucks are size 55 and bigger";
         }
         if (Objects.equals(PLaceToSkate.place.placeString, "street")){
-            answer = DatabaseStreet.street.truksUrl + " or " + DatabaseBig_Air.bigAir2.truksUrl;
+            answer = DatabaseStreet.street.truksUrl + " or " + DatabaseStreet.street2.truksUrl;
         }
         if (Objects.equals(PLaceToSkate.place.placeString, "big-air")){
             answer = DatabaseBig_Air.bigAir.truksUrl;

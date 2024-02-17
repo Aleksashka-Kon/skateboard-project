@@ -3,7 +3,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class GripPage extends JFrame{
-    private JPanel BearingsPage;
     private JPanel GripPage;
     private JLabel GripLabel;
     private JLabel ImageLabel;
@@ -15,10 +14,10 @@ public class GripPage extends JFrame{
     String answer;
     public GripPage(){
 
-        setContentPane(BearingsPage);
+        setContentPane(GripPage);
         setSize(1650, 1050);
         setVisible(true);
-        BearingsPage.setName("Grip page");
+        GripPage.setName("Grip page");
 
         if (PLaceToSkate.place.placeString == "street"){
 
